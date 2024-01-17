@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Jeff Nordlund Intersection Coding Exercise</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="main.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <div id="intersectioncontainer" class="intersectioncontainer" style="display:none;">
+            <div id="topintersectionpanel" class="intersectionpanel">
+                <div id="northlanecontainer" class="lanecontainer"></div>
+            </div>
+    
+            <div id="centerintersectionpanel" class="intersectionpanel">
+                <div id="westlanecontainer" class="lanecontainer"></div>
+                <div id="intersectioncenter" class="lanecontainer center"></div>
+                <div id="eastlanecontainer" class="lanecontainer"></div>
+            </div>
+            
+            <div id="bottomintersectionpanel" class="intersectionpanel">
+                <div id="southlanecontainer" class="lanecontainer"></div>
+            </div>
+        </div>
+
+        <div class="personaltitle">Jeff Nordlund Coding Exercise</div>
+        
+        <div id="greetingdisplay" class="greetingpanel">
+            <h4 id="greeting"></h5>
+
+            <p>
+                Welcome to my coding exercise submission!
+            </p>
+
+            <p>
+                Why did I do this in standard html/javascript instead of React?
+            </p>
+            <p>
+                Basically just time.  It's been a couple of years since I worked in React consistently and I 
+                didn't want to spend too much time googling how to do things in React when I can just 
+                knock them out in standard javascript and dom manipulation.
+            </p>
+            <p>
+                You'll notice the intersection has 7 lanes on each side instead of 8.  After reading the description 
+                I reached out to my product manager and suggested a normal intersection has the left turn lanes 
+                lined up with each other so there wasn't a need to create a separate one for each group of 
+                lanes.  After cussing me out for interrupting their weekend on a coding exercise they agreed so 
+                I went in that direction.
+            </p>
+            <p>
+                I didn't get to implementing the sensors or walk signal functionality.
+            </p>
+            <p>
+                There is an issue where the screen sticks sometimes.  My guess is it 
+                has to do with too many active intervals running.  If I was going to fix that I would 
+                look at using CSS transistions instead of moving the cars using intervals and re-positioning 
+                the "cars".
+            </p>
+
+            <p>
+                For this exercise the number of cars we generate is capped at 102.  If you want to 
+                have this run indefinitely for some reason just take out the counter check in the 
+                start method in the intersection.js file.
+            </p>
+
+            <div style="text-align: center;">
+                <button id="startbutton" class="greetingpanelbutton">Let's See the Magic</button>
+            </div>
+        </div>
+    </body>
+
+    <script src="javascript/models/car.js"></script>
+    <script src="javascript/models/carfactory.js"></script>
+    <script src="javascript/models/direction.js"></script>
+    <script src="javascript/models/lane.js"></script>
+    <script src="javascript/models/lanecontainer.js"></script>
+    <script src="javascript/models/stoplight.js"></script>
+    <script src="javascript/models/stoplightcontroller.js"></script>
+
+    <script src="javascript/intersection.js"></script>
+</html>
